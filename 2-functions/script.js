@@ -1,13 +1,13 @@
 //2.1 Fonctions simples
-const sayHello = function() {
+const sayHello = () => {
     console.log('Hello')
 }
 
-const sayMyName = function(first, last) {
+const sayMyName = (first, last) => {
     console.log(first, last)
 }
 
-const sayMyAge = function(age) {
+const sayMyAge = age => {
     console.log('You are ' + age + ' years old')
 }
 
@@ -22,7 +22,7 @@ const object = {
     color: 'red',
     shape: 'circle',
     threeDimensions: false,
-    showThis: function() {
+    showThis: () => {
         console.log(this)
     }
 }
@@ -38,11 +38,18 @@ const odile = {
         last: 'Crok'
     },
     age: 23,
-    //sayHello: ...
-    //sayMyName:...
-    //sayMyAge:...
-}
+    sayHello: () => {
+        console.log("Hello");
+    },
+    sayMyName: () => {
+        console.log(odile.name.first, odile.name.last);
+    },
+    sayMyAge: () => {
+        console.log(odile.age);
+    }
 
-//odile.sayHello()
-//odile.sayMyName()
-//odile.sayMyAge()
+};
+
+odile.sayHello()
+odile.sayMyName()
+odile.sayMyAge()
